@@ -14,7 +14,7 @@ public partial class MainPage : ContentPage
     private Point _currentTranslation;
     private bool _isPinching = false;
     private readonly float _panSensitivity = 0.5f; // Adjust this value to control pan sensitivity
-    private readonly float _pinchSensitivity = 0.9f; // Adjust this value to control pinch sensitivity
+    private readonly float _pinchSensitivity = 0.1f; // Adjust this value to control pinch sensitivity
 
     public MainPage()
 	{
@@ -95,6 +95,7 @@ public partial class MainPage : ContentPage
             else if (e.Status == GestureStatus.Completed || e.Status == GestureStatus.Canceled)
             {
                 _isPinching = false;
+                Task.Delay(TimeSpan.FromSeconds(1));
             }
     }
 
