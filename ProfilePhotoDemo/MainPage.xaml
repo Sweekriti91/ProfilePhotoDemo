@@ -3,15 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProfilePhotoDemo.MainPage">
 
-  <StackLayout Margin="20,20,20,20" VerticalOptions="FillAndExpand" BindingContext=".">
+  <StackLayout Margin="20,20,20,20" VerticalOptions="FillAndExpand">
 
-        <Grid>
-            <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
 
-            <Button Text="Rotate"  Grid.Column="1" FontSize="Medium" x:Name="rotatePhotoClock" HorizontalOptions="CenterAndExpand" />
-        </Grid>
+        <Button Text="Rotate" FontSize="Medium" x:Name="rotatePhotoClock" HorizontalOptions="CenterAndExpand" Clicked="rotatePhotoClock_Clicked"/>
 
         <GraphicsView x:Name="image"
                           HorizontalOptions="CenterAndExpand"
@@ -22,14 +17,11 @@
         <Grid VerticalOptions="End" Margin="0,20,0,0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-            <Button Text="Take Photo" Grid.Column="0" HorizontalOptions="FillAndExpand" CornerRadius="0" Margin="0" 
-                x:Name="takePhoto"/>
-            <Button Text="Choose Photo" Grid.Column="1"
+            <Button Text="Choose Photo" Grid.Column="0"
                     FontFamily="FuturaDemi" HorizontalOptions="FillAndExpand" CornerRadius="0" Margin="10,0,0,0"
-                x:Name="pickPhoto"/>
+                x:Name="pickPhoto" Clicked="pickPhoto_Clicked"/>
         </Grid>
 
     </StackLayout>
