@@ -12,7 +12,12 @@
                           HorizontalOptions="CenterAndExpand"
                           VerticalOptions="CenterAndExpand"
                           HeightRequest="350"
-                          WidthRequest="350" />
+                          WidthRequest="350" >
+            <GraphicsView.GestureRecognizers>
+                <PinchGestureRecognizer PinchUpdated="OnPinchUpdated"/>
+                <!-- <PanGestureRecognizer PanUpdated="OnPanUpdated"/> -->
+            </GraphicsView.GestureRecognizers>
+        </GraphicsView>
 
         <Grid VerticalOptions="End" Margin="0,20,0,0">
             <Grid.ColumnDefinitions>
