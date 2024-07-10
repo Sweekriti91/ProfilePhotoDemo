@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProfilePhotoDemo.MainPage">
 
-  <StackLayout Margin="20,20,20,20" VerticalOptions="FillAndExpand">
+  <StackLayout Margin="20,20,20,20" VerticalOptions="FillAndExpand" Orientation="Vertical">
 
 
         <Button Text="Rotate" FontSize="Medium" x:Name="rotatePhotoClock" HorizontalOptions="CenterAndExpand" Clicked="rotatePhotoClock_Clicked"/>
@@ -15,7 +15,7 @@
                           WidthRequest="350" >
             <GraphicsView.GestureRecognizers>
                 <PinchGestureRecognizer PinchUpdated="OnPinchUpdated"/>
-                <!-- <PanGestureRecognizer PanUpdated="OnPanUpdated"/> -->
+                <PanGestureRecognizer PanUpdated="OnPanUpdated"/>
             </GraphicsView.GestureRecognizers>
         </GraphicsView>
 
